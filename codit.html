@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <!--
+  <script type="text/javascript" src="userlist.js"></script>
+<link type="text/css" href="userlist.css" rel="stylesheet">
+-->
+
+    <!-- CodeMirror -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js"></script>-->
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
+    <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+    <script type="text/javascript" src="userlist.js"></script>
+
+    <!--Bootstrap-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link type="text/css" href="sidebar.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       Code Collab
+                    </a>
+                </li>
+                <!--
+                <li>
+    <a href="#">Save Collab</a>
+</li>
+-->
+                <li>
+                    <a href="#" id="logout">Log out</a>
+                </li>
+
+                <li>
+                    <a href="#" id="compile">Compile</a>
+                </li>
+
+
+                <li>
+                    <a href="#" id="clear" onclick="dispose()">Clear Collab</a>
+                </li>
+
+                <li>
+                    <a href="#addMember" id="addMember" data-toggle="modal" data-target="#emailModal">Add Member</a>
+                </li>
+
+                <!--
+              <li>
+    <div id="userlist"></div>
+</li>
+-->
+            </ul>
+        </div>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 href="#menu-toggle" id="menu-toggle">Code Collab- Bring awesomeness to life with friends!</h1>
+                        <div id="firepad"></div>
+                        <!--                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel1">Join Code Collab</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <h3 class="text-center">Add Member</h3></div>
+                        <div class="row">
+                            <hr>
+                        </div>
+
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Enter email</label>
+                                <input class="text-center form-control" id="email" type="email" placeholder="Email">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="addModalButton">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="codit.js"></script>
+</body>
+
+</html>

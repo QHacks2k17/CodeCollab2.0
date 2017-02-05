@@ -1,2 +1,2 @@
-# CodeCollab2.0
-V2 at like 12hrs till due
+# CodeCollab
+Collaborative tool for students to build together

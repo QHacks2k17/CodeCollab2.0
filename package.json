@@ -1,0 +1,31 @@
+{
+  "name": "codecollab",
+  "version": "1.0.0",
+  "description": "Interactive coding tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QHacks2k17/CodeCollab.git"
+  },
+  "author": "Tolu,Tolu, Ash, Bijan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/QHacks2k17/CodeCollab/issues"
+  },
+  "homepage": "https://github.com/QHacks2k17/CodeCollab#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "mime": "^1.3.4",
+    "npm": "^4.1.2",
+    "path": "^0.12.7",
+    "requirejs": "^2.3.2",
+    "sweetalert": "^1.1.3",
+    "twilio-video": "^1.0.0-beta4"
+  }
+}
