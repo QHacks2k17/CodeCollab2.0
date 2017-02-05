@@ -107,7 +107,7 @@ function init(theKey) {
     firepad = Firepad.fromCodeMirror(firepadRef.push(), codeMirror, {
         richTextShortcuts: true,
         richTextToolbar: true,
-        defaultText: '// JavaScript Editing with Code Collab!\nfunction go() {\n  var message = "Hello, QHacks.";\n  console.log(message);\n}'
+        defaultText: ' s= 1+1\nprint s'
     });
 
 }

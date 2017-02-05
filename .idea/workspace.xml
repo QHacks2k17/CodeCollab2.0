@@ -21,17 +21,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="codit.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="codit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="247" column="34" selection-start-line="247" selection-start-column="34" selection-end-line="247" selection-end-column="34" />
+            <state relative-caret-position="170">
+              <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="codit.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="codit.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1183">
@@ -252,15 +252,15 @@
       <workItem from="1486239353713" duration="7555000" />
       <workItem from="1486265093585" duration="3122000" />
       <workItem from="1486285336694" duration="369000" />
-      <workItem from="1486309484155" duration="784000" />
+      <workItem from="1486309484155" duration="2207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20695000" />
+    <option name="totallyTimeSpent" value="22118000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21056548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -476,18 +476,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codit.html">
+    <entry file="file://$PROJECT_DIR$/codit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1183">
-          <caret line="20" column="93" selection-start-line="20" selection-start-column="93" selection-end-line="20" selection-end-column="93" />
+        <state relative-caret-position="170">
+          <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/codit.js">
+    <entry file="file://$PROJECT_DIR$/codit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="247" column="34" selection-start-line="247" selection-start-column="34" selection-end-line="247" selection-end-column="34" />
+        <state relative-caret-position="-1183">
+          <caret line="20" column="93" selection-start-line="20" selection-start-column="93" selection-end-line="20" selection-end-column="93" />
           <folding />
         </state>
       </provider>
