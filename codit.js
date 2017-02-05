@@ -263,8 +263,10 @@ function getKey() {
 function getLastSession() {
 
     firebase.database().ref('sessions').once('value').then(function (snapshot) {
-        console.log('sessions', Object.keys(snapshot.val())[0])
+        var len = Object.keys(snapshot.val()).length
+            console.log(len)
+        console.log('sessions', Object.keys(snapshot.val())[len-1])
 
-        init(Object.keys(snapshot.val())[0])
+        init(Object.keys(snapshot.val())[len-1])
     })
 }
