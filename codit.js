@@ -24,6 +24,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 $('#logout').on('click', logout)
 $('#clear').on('click', dispose)
 $('#addModalButton').on('click', add)
+$('#compile').on('click', replIt)
 
 init()
 
@@ -95,5 +96,43 @@ function dispose() {
 }
 
 function add() {
+
+}
+
+function replIt(){
+    var source = $('#firebad').val()
+    var TOKEN = { msg_mac: "8NdMhouUpehRqdmwh7N9c7g8MrhXFvsDjSOfmWSDFT4=", time_created: 1486261341000 };
+    var date = +new Date()
+
+    var repl = new ReplitClient('api.repl.it', 80, 'python', TOKEN);
+    repl.connect().then(function() {
+        console.log('connected');
+
+        // Connected now we evaluate some code.
+        return repl.evaluate(source, {
+            stdout: function(output) {
+                // output from the ruby process: hello world
+                console.log(output);
+            }
+        });
+    }).then(
+        function(result) {
+            // The evaluation succeeded. Result will contain `data` or `error`
+            // depending on whether the code compiled and ran or if there was an
+            // error.
+            if (result.error) {
+                console.log('Error:', result.error);
+            } else {
+                console.log('Result', result);
+            }
+
+            // After that you may repeat the process and evaluate code in the same context.
+        },
+        function error(error) {
+            // There was an error connecting to the service :(
+            console.log(error);
+            console.error('Error connecting to repl.it');
+        }
+    );
 
 }
