@@ -15,6 +15,7 @@ var email;
 
 var newSession;
 var theKey;
+var sessionKey;
 
 
 firebase.auth().onAuthStateChanged(function (user) {
@@ -31,6 +32,8 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 
 });
+
+//$('#codeArea').on('change', fillPad)
 
 function buildDialog() {
     var r = confirm('Do you wanna start new session: ')
@@ -70,8 +73,12 @@ function initA() {
     firepad = Firepad.fromCodeMirror(firepadRef.push(), codeMirror, {
         richTextShortcuts: true,
         richTextToolbar: true,
-        defaultText: '// JavaScript Editing with Code Collab!\nfunction go() {\n  var message = "Hello, QHacks.";\n  console.log(message);\n}'
+        defaultText: 's = "Tolu" \nprint s'
     });
+
+    firepad.on('ready', function () {
+        firepad.on('synced')
+    })
     console.log('inhere')
     //    var userId = Math.floor(Math.random() * 9999999999).toString();
     //    var firepadUserList = FirepadUserList.fromDiv(firepadRef.child('users'),
@@ -106,7 +113,7 @@ function init(theKey) {
 }
 
 
-var sessionKey
+
 
 function getExampleRefA() {
     var ref = firebase.database().ref();
@@ -212,7 +219,8 @@ function add() {
 }
 
 function replIt() {
-    var source = $('#firepad').val()
+    var source = firepad.getText()
+    console.log('source', source)
     var TOKEN = {
         msg_mac: "8NdMhouUpehRqdmwh7N9c7g8MrhXFvsDjSOfmWSDFT4=",
         time_created: 1486261341000
@@ -228,6 +236,7 @@ function replIt() {
             stdout: function (output) {
                 // output from the ruby process: hello world
                 console.log(output);
+                alert(output)
             }
         });
     }).then(
@@ -237,6 +246,7 @@ function replIt() {
             // error.
             if (result.error) {
                 console.log('Error:', result.error);
+                alert(result.error)
             } else {
                 console.log('Result', result);
             }
@@ -270,3 +280,4 @@ function getLastSession() {
         init(Object.keys(snapshot.val())[len-1])
     })
 }
+
